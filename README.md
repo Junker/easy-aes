@@ -18,13 +18,13 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 **encrypting data:**
 
 ```lisp
-(easy-aes:encrypt some-string "my-password") ; returns encypted base64 sting
+(easy-aes:encrypt some-string "my-password") ; returns encypted base64 string
 ;; or
 (easy-aes:encrypt some-vector "my-password")
 ;; or
 (easy-aes:encrypt some-stream "my-password")
 ;; or
-(easy-aes:encrypt some-string "my-password" :uri t) ; returns encypted base64 sting suitable for URL
+(easy-aes:encrypt some-string "my-password" :uri t) ; returns encypted base64 string suitable for URL
 ```
 
 **decrypting data:**
@@ -35,4 +35,12 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 (easy-aes:decrypt b64-stream "my-password")
 ;; or
 (easy-aes:decrypt b64-url-string "my-password" :uri t)
+```
+
+**example:**
+
+```lisp
+(babel:octets-to-string (easy-aes:decrypt (easy-aes:encrypt "test123" "pass") 
+                                          "pass")) 
+;; => "test123"
 ```
