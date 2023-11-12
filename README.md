@@ -40,7 +40,8 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 **example:**
 
 ```lisp
-(babel:octets-to-string (easy-aes:decrypt (easy-aes:encrypt "test123" "pass") 
-                                          "pass")) 
+(babel:octets-to-string
+ (easy-aes:decrypt (easy-aes:encrypt "test123" "pass")
+                   "pass")) 
 ;; => "test123"
 ```
