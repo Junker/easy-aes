@@ -17,7 +17,7 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 
 **encrypting data:**
 
-```lisp
+```common-lisp
 (easy-aes:encrypt some-string "my-password") ; returns encypted base64 string
 ;; or
 (easy-aes:encrypt some-vector "my-password")
@@ -29,7 +29,7 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 
 **decrypting data:**
 
-```lisp
+```common-lisp
 (easy-aes:decrypt b64-string "my-password")
 ;; or
 (easy-aes:decrypt b64-stream "my-password")
@@ -39,7 +39,7 @@ This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
 
 **example:**
 
-```lisp
+```common-lisp
 (babel:octets-to-string
  (easy-aes:decrypt (easy-aes:encrypt "test123" "pass")
                    "pass")) 
