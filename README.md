@@ -1,5 +1,9 @@
 # Easy-AES
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Common Lisp](https://img.shields.io/badge/Common%20Lisp-library-orange.svg)](https://common-lisp.net/)
+
+
 Perform AES-256 (CBC) encryption/decryption compatible with OpenSSL, CryptoJS,
 Gibberish AES and other libraries.
 
